@@ -1,11 +1,5 @@
-# Anomalous-scene-recognition-through-IOT: a data fusion approach
-An automated surveillance system solution composed by multiple data sources is presented. Data sources does not necessarily mean expensive hardware, but common smartphone cameras. The data sources record people moving in a scene, the information about the people movement is analyzed in order to understand if anomalous behavior occurred during the recording. The automated surveillance system can trigger an alarm at the exact time an anomalous behavior is recognize.
+# Anomalous scene recognition through-IOT: a data fusion approach
 
-The video cameras can have multiple fixed position. Video signal of each physical sensors are first
-processed to extract moving image region. The information of the moving object in the screen are
-then gathered, each video source from the fixed position will generate the geometrical information
-needed to perform fusion deploying Unscented Kalman filter.
-An unsupervised approach adopting dimensionality reduction technique UMAP and clustering
-algorithm K-mean is proposed to extract common pattern in the data fused. These algorithms
-automatically cluster trajectories that have common statistic behavior, and cluster pattern with
-uncommon behavior, or anomalous behavior. 
+Video-surveillance systems are a powerful tool applied in varied scenarios with the aim of automatizing the detection of different risk situations and helping human security officers to take appropriate decisions in order to enhance the protection of assets.
+In this paper, a multi-sensor data fusion system for people tracking and an innovative unsupervised anomaly detection approach is presented. The multi sensor data system is able to track people in indoor environment. The system can take advantage of the redundant information coming from the different cameras monitoring the same scene. The measurements (positions of the targets) obtained from the available sources are fused together to obtain a more accurate estimate. Data fusion is performed adopting Unscented Kalman Filters UKF. Two validation were accomplished: a visual validation and adding white noise on the measurement. Compared to a geometrical approach, the fusion deploying UKF produce more accurate and reliable trajectories.
+The technique for unsupervised anomaly detection in trajectory data adopts Uniform Manifold Approximation and Projection UMAP algorithm and k-means clustering. Each trajectory will be first analysed and context related features will be extracted. Then each trajectory will be projected on a two dimensions space by the UMAP algorithm. The anomaly detection is achieved by partitioning the feature space into two clusters using kmean with k=2.  Experiment on the unsupervised anomaly detector are carried out and results confirm the effectiveness of the approach.
